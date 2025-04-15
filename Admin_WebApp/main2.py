@@ -16,7 +16,7 @@ import random
 st.set_page_config(layout="wide")
 
 # Authenticate to Firestore with the JSON account key.
-db = firestore.Client.from_service_account_json("WEBB_APP_TREBIRTH/testdata1-20ec5-firebase-adminsdk-an9r6-a87cacba1d.json")
+db = firestore.Client.from_service_account_json("Admin_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-a87cacba1d.json")
 
 # Define your Firestore query and data extraction logic
 i = 1 
