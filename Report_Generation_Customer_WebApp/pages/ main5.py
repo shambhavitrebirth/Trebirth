@@ -41,7 +41,7 @@ company_name = st.session_state["company"]
 st.write(f"Welcome, {company_name}!")
 
 # Initialize Firestore
-cred_path = "Report_Generation_Web_App/testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json"
+cred_path = "Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json"
 db = firestore.Client.from_service_account_json(cred_path)
     # Your existing web app code starts here...
 #st.title('Test Analysis Report')
