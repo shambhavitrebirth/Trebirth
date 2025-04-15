@@ -40,7 +40,7 @@ if "authenticated" not in st.session_state or not st.session_state["authenticate
 st.write(f"Welcome, {st.session_state.username}!")
 
 # Initialize Firestore
-cred_path = "Report_Generation_Web_App/testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json"
+cred_path = "Report_Generation_Admin_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-d15c118c96.json"
 db = firestore.Client.from_service_account_json(cred_path)
     # Your existing web app code starts here...
 #st.title('Test Analysis Report')
