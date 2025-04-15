@@ -32,7 +32,7 @@ from collection_11 import collection_11_data
 st.set_page_config(layout="wide")
 st.title("Farm Analytics")
 
-db = firestore.Client.from_service_account_json("WEBB_APP_TREBIRTH/testdata1-20ec5-firebase-adminsdk-an9r6-a87cacba1d.json")
+db = firestore.Client.from_service_account_json("Admin_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-a87cacba1d.json")
 
 
 def convert_to_local_time(timestamp, timezone='Asia/Kolkata'):
