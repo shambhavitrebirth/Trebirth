@@ -1,7 +1,6 @@
 import streamlit as st
 from google.cloud import firestore
 import pandas as pd
-from google.cloud.firestore import FieldFilter
 from io import BytesIO
 import matplotlib.pyplot as plt
 from datetime import datetime
