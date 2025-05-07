@@ -109,6 +109,7 @@ def get_firestore_data(query):
 db = firestore.Client.from_service_account_json("Data_Analytics/testdata1-20ec5-firebase-adminsdk-an9r6-3deba9e5fd.json")
 
 # User input for Row No., Tree No., Scan No., and Label
+st.write(db.collection('BT_Classic').document('T10R120S2').get())
 row_number = st.text_input('Enter Row number')
 tree_number = st.text_input('Enter Tree number')
 scan_number = st.text_input('Enter Scan number', 'All')
