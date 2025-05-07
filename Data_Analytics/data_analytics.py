@@ -124,15 +124,15 @@ query = db.collection('BT_Classic')
 
 # Apply filters based on user input
 if row_number:
-    query = query.where('RowNo', '==', int(row_number))
+    query = query.where(filter=FieldFilter('RowNo', '==', int(row_number))
 if tree_number:
-    query = query.where('TreeNo', '==', int(tree_number))
+    query = query.where(filter=FieldFilter('TreeNo', '==', int(tree_number))
 if scan_number != 'All':
-    query = query.where('ScanNo', '==', int(scan_number))
+    query = query.where(filter=FieldFilter('ScanNo', '==', int(scan_number))
 if bucket_number != 'All':
-    query = query.where('BucketID', '==', int(bucket_number))
+    query = query.where(filter=FieldFilter('BucketID', '==', int(bucket_number))
 if label_infstat != 'All':
-    query = query.where('InfStat', '==', label_infstat)
+    query = query.where(filter=FieldFilter('InfStat', '==', label_infstat)
 
 # Get documents based on the query
 try:
