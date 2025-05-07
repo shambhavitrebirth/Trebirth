@@ -11,4 +11,3 @@ xlsxwriter==3.0.1
 openpyxl
 matplotlib
 scipy>=1.7.1
-FieldFilter
