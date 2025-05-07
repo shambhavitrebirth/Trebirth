@@ -10,6 +10,7 @@ import zipfile
 import os
 import random
 from scipy import signal
+from google.cloud.firestore_v1.base_query import FieldFilter
 from scipy.stats import skew, kurtosis
 from preprocess import detrend, fq, stats_radar, columns_reports_unique
 from google.api_core.exceptions import ResourceExhausted, RetryError
