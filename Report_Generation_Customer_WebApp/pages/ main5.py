@@ -41,7 +41,7 @@ company_name = st.session_state["company"]
 st.write(f"Welcome, {company_name}!")
 
 # Initialize Firestore
-cred_path = "Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-fb6fac1f20.json"
+cred_path = "Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-2ae6b81ad8.json"
 db = firestore.Client.from_service_account_json(cred_path)
     # Your existing web app code starts here...
 #st.title('Test Analysis Report')
@@ -82,7 +82,7 @@ def get_firestore_data(query):
             break
     raise Exception("Max retries exceeded")
 
-db = firestore.Client.from_service_account_json("Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-fb6fac1f20.json")
+db = firestore.Client.from_service_account_json("Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-2ae6b81ad8.json")
 query = db.collection('homescan2')
 
 def convert_to_local_time(timestamp, timezone='Asia/Kolkata'):
