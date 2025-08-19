@@ -1,5 +1,6 @@
 import streamlit as st
 from google.cloud import firestore
+import google.auth
 import pandas as pd
 from google.cloud.firestore import FieldFilter
 from io import BytesIO
@@ -41,8 +42,11 @@ company_name = st.session_state["company"]
 st.write(f"Welcome, {company_name}!")
 
 # Initialize Firestore
-cred_path = "Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-2ae6b81ad8.json"
-db = firestore.Client.from_service_account_json(cred_path)
+#cred_path = "Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-2ae6b81ad8.json"
+#db = firestore.Client.from_service_account_json(cred_path)
+
+db = firestore.Client.from_service_account_info(st.secrets["gcp_service_account"])
+
     # Your existing web app code starts here...
 #st.title('Test Analysis Report')
 st.markdown(
@@ -82,8 +86,11 @@ def get_firestore_data(query):
             break
     raise Exception("Max retries exceeded")
 
-db = firestore.Client.from_service_account_json("Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-2ae6b81ad8.json")
-query = db.collection('homescan2')
+#db = firestore.Client.from_service_account_json("Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-2ae6b81ad8.json")
+#query = db.collection('homescan2')
+
+db = firestore.Client.from_service_account_info(st.secrets["gcp_service_account"])
+query = db.collection("homescan2")
 
 def convert_to_local_time(timestamp, timezone='Asia/Kolkata'):
     local_tz = pytz.timezone(timezone)
