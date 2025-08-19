@@ -153,7 +153,7 @@ def plot_time_domain(preprocessed_scan, device_name, timestamp, scan_duration, s
   
 def fetch_data(company_name):
     docs = query.stream()
-    st.write(docs)
+    #st.write(docs)
 
     locations = set()
     city_to_areas = {}  # Dictionary to map cities to their respective areas
