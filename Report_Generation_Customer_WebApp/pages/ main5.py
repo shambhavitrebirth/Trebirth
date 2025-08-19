@@ -31,6 +31,7 @@ import plotly.io as pio
 from reportlab.lib.units import inch
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+import kaleido
 
 st.set_page_config(layout="wide")
 # Redirect to login page if not authenticated
