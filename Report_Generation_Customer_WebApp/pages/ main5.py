@@ -210,7 +210,7 @@ if not filtered_scans:
     st.write("No data found.")
 else:
     # --- Extract Unique Apartments with Incharge Info ---
-    apartments_info = {}
+    #apartments_info = {}
     for scan in filtered_scans:
         apartment = scan.get("Apartment", "").strip()
         incharge = scan.get("Incharge", "").strip()
