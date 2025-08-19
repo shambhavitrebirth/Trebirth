@@ -45,7 +45,9 @@ st.write(f"Welcome, {company_name}!")
 #cred_path = "Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-2ae6b81ad8.json"
 #db = firestore.Client.from_service_account_json(cred_path)
 
+# Use Streamlit secrets instead of local JSON
 db = firestore.Client.from_service_account_info(st.secrets["firebase_admin"])
+query = db.collection("homescan2")
 
     # Your existing web app code starts here...
 #st.title('Test Analysis Report')
@@ -89,8 +91,8 @@ def get_firestore_data(query):
 #db = firestore.Client.from_service_account_json("Report_Generation_Customer_WebApp/testdata1-20ec5-firebase-adminsdk-an9r6-2ae6b81ad8.json")
 #query = db.collection('homescan2')
 
-db = firestore.Client.from_service_account_info(st.secrets["firebase_admin"])
-query = db.collection("homescan2")
+#db = firestore.Client.from_service_account_info(st.secrets["firebase_admin"])
+#query = db.collection("homescan2")
 
 def convert_to_local_time(timestamp, timezone='Asia/Kolkata'):
     local_tz = pytz.timezone(timezone)
